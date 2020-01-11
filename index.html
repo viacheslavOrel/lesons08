@@ -19,14 +19,14 @@
 		console.log(myFlat(secondTest));
 		console.log(secondTest.flat(Infinity)); // :-)
 
-		function odd(array) {
+		function even(array) {
 			return array.reduce(function(arr, number){
 				if (number % 2 === 1) arr.push(number);
 				return arr;
 			}, [])
 		}
 
-		function even(array) {
+		function odd(array) {
 			return array.reduce(function(arr, number) {
 				if (number % 2 === 0) arr.push(number);
 				return arr;
@@ -34,8 +34,7 @@
 		}
 
 		function isPolindrome(number) {
-			if (String(number) === String(number).split("").reverse().join("")) return true;
-			return false;
+			return (String(number) === String(number).split("").reverse().join(""));
 		}
 
 		function myFlat(inputArray) {
